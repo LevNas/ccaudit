@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Adapting ccaudit for other tools, audit regimes, or storage backends
+    url: https://github.com/LevNas/ccaudit/blob/main/CONTRIBUTING.md#adapting-ccaudit-for-other-use-cases
+    about: Forks for other AI assistants, alternative audit-side workflows, SIEM integration, or compliance-regime-specific scoring are encouraged — see the contributing guide for context.
+  - name: Vendor-neutrality rule for the bundled secret-pattern list
+    url: https://github.com/LevNas/ccaudit/blob/main/CONTRIBUTING.md#vendor-neutrality
+    about: Before proposing a new secret pattern, please read the vendor-neutrality rule. Organization-specific patterns belong in CCAUDIT_PRE_FLUSH_HOOK.

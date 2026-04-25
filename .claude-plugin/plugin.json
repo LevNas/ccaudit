@@ -1,7 +1,7 @@
 {
   "name": "ccaudit",
   "description": "Record and preserve audit trails of AI-assisted work so humans can verify and attest. Provides automatic Stop-hook flush to a remote trail repository plus /audit-flush for manual inspection.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "LevNas"
   },

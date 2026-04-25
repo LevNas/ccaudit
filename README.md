@@ -121,6 +121,16 @@ Use when you want to act on the staging directory manually:
 
 See [docs/roadmap.md](docs/roadmap.md) for candidates.
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the project's scope, the vendor-neutrality rule for the bundled secret-pattern list, plugin conventions, the smoke test, and pull request guidelines.
+
 ## License
 
-MIT
+This project is licensed under the [MIT License](LICENSE) — see the `LICENSE` file for the full text.
+
+In short: you're free to use, modify, and redistribute ccaudit, including for commercial purposes, as long as you keep the copyright notice and license text.
+
+If you build something based on ccaudit, a credit line is appreciated (not required):
+
+> Based on [ccaudit](https://github.com/LevNas/ccaudit) by LevNas.

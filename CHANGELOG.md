@@ -2,6 +2,16 @@
 
 All notable changes to ccaudit are documented here. Format is loosely Keep-a-Changelog; dates in ISO-8601.
 
+## [0.1.1] — 2026-04-25
+
+Documentation and governance only — no code changes.
+
+### Added
+
+- `CONTRIBUTING.md` documenting project scope, the **vendor-neutrality rule** for the bundled secret-pattern list (organization-specific patterns must use `CCAUDIT_PRE_FLUSH_HOOK`, not the bundled list), plugin conventions, smoke-test expectation for PRs, and pull request guidelines.
+- Three issue templates under `.github/ISSUE_TEMPLATE/` (bug, feature, question) with a `config.yml` linking contributors to the contributing guide and the vendor-neutrality rule before they file.
+- `README.md` License section expanded with MIT terms summary and an attribution request for forks (not a license condition); a new `Contributing` section points at `CONTRIBUTING.md`.
+
 ## [0.1.0] — 2026-04-25
 
 First release. Intentionally minimal.
