@@ -1,0 +1,24 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  smoke-test:
+    name: smoke-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Configure git identity
+        # smoke-test.sh sets per-invocation env vars, but a baseline identity
+        # makes any incidental git command in a step succeed without surprises.
+        run: |
+          git config --global user.name  "ccaudit-ci"
+          git config --global user.email "ccaudit-ci@users.noreply.github.com"
+
+      - name: Run smoke test
+        run: bash test/smoke-test.sh

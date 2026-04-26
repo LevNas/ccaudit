@@ -2,6 +2,17 @@
 
 All notable changes to ccaudit are documented here. Format is loosely Keep-a-Changelog; dates in ISO-8601.
 
+## [0.1.2] — 2026-04-26
+
+Governance hardening — no code changes to the hook, skill, or secret-pattern list.
+
+### Added
+
+- `SECURITY.md` — vulnerability disclosure policy. Reports go through [GitHub Security Advisories](https://github.com/LevNas/ccaudit/security/advisories/new); explicit in-scope and out-of-scope lists keep operator-side concerns (trail repo authentication, encryption at rest, compliance regime mapping) separate from defects in shipped code. Pre-1.0 support window: latest minor only.
+- `.github/workflows/ci.yml` — runs `bash test/smoke-test.sh` on every pull request and push to `main`. The smoke test asserts both clean-flush and secret-blocked paths against a throwaway local bare repo, no external network or credentials. This makes regressions like the `bbca869` grep `-e` / `--` pitfall blockable at PR time rather than relying on memory of a manual `bash test/smoke-test.sh`.
+- `.github/PULL_REQUEST_TEMPLATE.md` — checklist mirroring the contract in `CONTRIBUTING.md`: vendor-neutrality preserved, secret-pattern lockstep update, smoke test passed, docs and CHANGELOG updated, one logical change per PR.
+- `README.md` Security section pointing at `SECURITY.md`.
+
 ## [0.1.1] — 2026-04-25
 
 Documentation and governance only — no code changes.

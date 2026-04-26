@@ -121,6 +121,10 @@ Use when you want to act on the staging directory manually:
 
 See [docs/roadmap.md](docs/roadmap.md) for candidates.
 
+## Security
+
+Found a way to bypass the secret scan, push to a wrong remote, or otherwise compromise the trail's integrity? Please report it via GitHub Security Advisories — see [SECURITY.md](SECURITY.md) for the channel, scope, and response targets. Do not file a public issue for security defects.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the project's scope, the vendor-neutrality rule for the bundled secret-pattern list, plugin conventions, the smoke test, and pull request guidelines.
