@@ -2,6 +2,14 @@
 
 All notable changes to ccaudit are documented here. Format is loosely Keep-a-Changelog; dates in ISO-8601.
 
+## [0.1.3] — 2026-06-24
+
+Compatibility fix — no change to the hook's behavior or the secret-pattern list.
+
+### Fixed
+
+- Hook declaration moved out of `plugin.json` into a structured `hooks/hooks.json`. The previous inline shorthand `"hooks": { "Stop": "hooks/auto-flush.sh" }` (a bare-string value) is not accepted by current Claude Code plugin validation, which caused the plugin to fail to load ("error during load") and to silently fail on install — leaving it enabled-but-never-installed. The `Stop` hook now runs via `bash "${CLAUDE_PLUGIN_ROOT}/hooks/auto-flush.sh"` with a 30s timeout, matching the convention used by the other plugins in this marketplace. No change to `auto-flush.sh` or its flush/secret-scan logic.
+
 ## [0.1.2] — 2026-04-26
 
 Governance hardening — no code changes to the hook, skill, or secret-pattern list.
